@@ -4,7 +4,11 @@ A native macOS menu bar app that keeps your Mac awake for calls, downloads, pres
 
 ## Run
 
-Build the app using the commands below, then open `dist/Brew.app`. Brew appears as a coffee cup in the menu bar and has no Dock icon. On first launch it opens its control popover. Drag the app into Applications if you want to keep it installed; then configure Launch at login in Settings.
+Download the installer or app ZIP from [GitHub Releases](https://github.com/flux-i/brew/releases/latest). The installer places Brew in `/Applications/Brew.app`; for the ZIP, unzip and drag the app into Applications. Quit an existing Brew instance before installing, then open Brew from Applications.
+
+Release binaries currently support Apple Silicon and macOS 13 or later. The initial release uses an unsigned installer and a locally signed, unnotarized app. macOS may require approval through System Settings → Privacy & Security → Open Anyway; see [Apple's guidance](https://support.apple.com/en-us/102445).
+
+To build locally, use the commands below and open `dist/Brew.app`. Brew appears as a coffee cup in the menu bar and has no Dock icon. On first launch it opens its control popover. Configure Launch at login in Settings if you want Brew available after signing in.
 
 Default controls: left click opens the popover; right click or Control-click toggles the awake session; Option-click always opens the popover. The default global shortcut is **⌥⌘B**. Change or disable it in Settings → Shortcuts.
 
@@ -56,6 +60,9 @@ zsh scripts/build.sh
 # App build using Command Line Tools, without native Shortcuts metadata
 zsh scripts/build.sh --standalone
 
+# Installer, versioned app ZIP, and SHA-256 checksums
+zsh scripts/package.sh --standalone
+
 # Core and controller tests, using the standalone test harness
 zsh scripts/test.sh
 
@@ -77,6 +84,8 @@ open -n -W "$PWD/dist/Brew.app" --args --launch-check --report "$PWD/build/launc
 ```
 
 Open `Brew.xcodeproj` to develop in Xcode. `scripts/generate_project.py` regenerates the project from the Swift source list. The build script generates the icon, signs the bundle locally, and creates `dist/Brew.zip`. For distribution to other Macs, sign and notarize with your own Apple Developer credentials.
+
+The packaging script builds in an isolated temporary folder, then creates `dist/Brew-<version>-<architecture>.pkg`, the matching ZIP, and a checksums file. It enforces the app's macOS and architecture requirements, disables bundle relocation, and installs only into Applications. No install scripts are included. `BREW_OUTPUT_DIR` overrides the build script's output folder. Optional `BREW_CODE_SIGN_IDENTITY` and `BREW_INSTALLER_SIGN_IDENTITY` select installed app and installer signing certificates; notarization is a separate step.
 
 ## Verified on this Mac
 

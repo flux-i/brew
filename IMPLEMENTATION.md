@@ -31,3 +31,14 @@ Final UI check: actual menu bar icon and popover launch passed; captured the rea
 ## Menu bar visibility repair
 
 The user screenshot exposed a black inactive icon against the dark menu bar. Replaced the SF Symbol/template tint with explicit native coffee artwork and system-theme foreground colors. Added a persistent status-item name and explicit window-close behavior. Native launch QA passed after closing the popup and Settings. Pixel inspection of the actual status-button captures confirms black foreground in light mode, white in dark mode, and white in the current macOS Dark configuration. See `build/brew-status-system.png` and `build/launch-check.log`. Rebuilt, signed, and repackaged the app.
+
+## Installer and first release
+
+- [x] Add isolated build output support in `scripts/build.sh`; verify packaging does not replace the running development app.
+- [x] Add `scripts/package.sh` and native installer resources; verify architecture/minimum macOS, non-relocatable Applications payload, and checksums.
+- [x] Extract the package and ZIP, compare their payloads, validate signatures, and run core tests and live diagnostics from the packaged app.
+- [ ] Push packaging source, tag `v1.0.0`, upload the PKG, ZIP, and checksums, and verify the public release and uploaded hashes.
+
+No Developer ID identities are installed on this Mac. Publish an explicitly unsigned, unnotarized Apple Silicon release with local app signing and clear installation notes.
+
+Release validation: `build/release-core-tests.log` reports 17 tests, 58 assertions, 0 failures. `build/release-final-1.0.0/validation.log` confirms matching payloads, version, architecture, minimum OS, fixed destination, and native Installer selection. Both extracted app signatures validate, live packaged-app diagnostics pass, and download checksums match.
