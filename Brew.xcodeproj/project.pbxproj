@@ -1,0 +1,46 @@
+// !$*UTF8*$!
+{archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+		841B4F5C35DF7BE958F2AE7D = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/Brew/Entry.swift"; sourceTree = SOURCE_ROOT;};
+		C31923C9A3CA7E71C9808282 = {isa = PBXBuildFile; fileRef = 841B4F5C35DF7BE958F2AE7D;};
+		C026761A5A86ED7383DE8641 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/BrewKit/AppDelegate.swift"; sourceTree = SOURCE_ROOT;};
+		BF8F07D61EC84A175597A68D = {isa = PBXBuildFile; fileRef = C026761A5A86ED7383DE8641;};
+		864531A39851078792BD05B7 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/BrewKit/AppModel.swift"; sourceTree = SOURCE_ROOT;};
+		7665B3A2A03CE637892AC153 = {isa = PBXBuildFile; fileRef = 864531A39851078792BD05B7;};
+		95CD784BF85CD47EC877566A = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/BrewKit/Automation.swift"; sourceTree = SOURCE_ROOT;};
+		5B4CC6D27AE1238189C6D62E = {isa = PBXBuildFile; fileRef = 95CD784BF85CD47EC877566A;};
+		D3D61D15A69BAAC5627020AB = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/BrewKit/Diagnostics.swift"; sourceTree = SOURCE_ROOT;};
+		7985ED909FDAB1F3D98EC745 = {isa = PBXBuildFile; fileRef = D3D61D15A69BAAC5627020AB;};
+		E14490A1C80C93B4C0589C08 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/BrewKit/HotKey.swift"; sourceTree = SOURCE_ROOT;};
+		BDC0C3C76E9E678999C2C52E = {isa = PBXBuildFile; fileRef = E14490A1C80C93B4C0589C08;};
+		EBFBC30F29C9DA269C470F20 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/BrewKit/PowerController.swift"; sourceTree = SOURCE_ROOT;};
+		450EA1207AA318FEC746987B = {isa = PBXBuildFile; fileRef = EBFBC30F29C9DA269C470F20;};
+		86037B3EBF702306B5D62B15 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/BrewKit/Services.swift"; sourceTree = SOURCE_ROOT;};
+		51597EA23FCB0D98CE5E84F1 = {isa = PBXBuildFile; fileRef = 86037B3EBF702306B5D62B15;};
+		45A1EF016A5639F57F9C8628 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/BrewKit/Session.swift"; sourceTree = SOURCE_ROOT;};
+		76F05FB78675C6B18BF0B5F6 = {isa = PBXBuildFile; fileRef = 45A1EF016A5639F57F9C8628;};
+		34906F01E0D7AC10DF83C915 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/BrewKit/StatusIcon.swift"; sourceTree = SOURCE_ROOT;};
+		DB66F8AD3D00D9F71B207D8A = {isa = PBXBuildFile; fileRef = 34906F01E0D7AC10DF83C915;};
+		6774EC7DCF7F8B17C2BA6F76 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sources/BrewKit/Views.swift"; sourceTree = SOURCE_ROOT;};
+		94C5364A93F60BBE3EF12FE8 = {isa = PBXBuildFile; fileRef = 6774EC7DCF7F8B17C2BA6F76;};
+		555FDBC40E69927B4127688A = {isa = PBXFileReference; lastKnownFileType = file; path = "Resources/Brew.sdef"; sourceTree = SOURCE_ROOT;};
+		F9D8A4BFC1DD1076F5DB4708 = {isa = PBXBuildFile; fileRef = 555FDBC40E69927B4127688A;};
+		E340DC658A2781F6362F4AAA = {isa = PBXFileReference; lastKnownFileType = file; path = "Resources/Brew.icns"; sourceTree = SOURCE_ROOT;};
+		EB7C1BA7B4127635FD630D8A = {isa = PBXBuildFile; fileRef = E340DC658A2781F6362F4AAA;};
+		06271BAF49532C879AA3C58B = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Resources/Info.plist; sourceTree = SOURCE_ROOT;};
+		A8792157CB4F27FB949C035F = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Brew.app; sourceTree = BUILT_PRODUCTS_DIR;};
+		878A52FC5FF6A57D50B7B870 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (C31923C9A3CA7E71C9808282,BF8F07D61EC84A175597A68D,7665B3A2A03CE637892AC153,5B4CC6D27AE1238189C6D62E,7985ED909FDAB1F3D98EC745,BDC0C3C76E9E678999C2C52E,450EA1207AA318FEC746987B,51597EA23FCB0D98CE5E84F1,76F05FB78675C6B18BF0B5F6,DB66F8AD3D00D9F71B207D8A,94C5364A93F60BBE3EF12FE8); runOnlyForDeploymentPostprocessing = 0;};
+		41D311A605520FC7B8B9A980 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (F9D8A4BFC1DD1076F5DB4708,EB7C1BA7B4127635FD630D8A); runOnlyForDeploymentPostprocessing = 0;};
+		E2AA269EB967A8853A258BFA = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
+		F7EBC87E12F52DB20EE60E65 = {isa = PBXGroup; name = Sources; children = (841B4F5C35DF7BE958F2AE7D,C026761A5A86ED7383DE8641,864531A39851078792BD05B7,95CD784BF85CD47EC877566A,D3D61D15A69BAAC5627020AB,E14490A1C80C93B4C0589C08,EBFBC30F29C9DA269C470F20,86037B3EBF702306B5D62B15,45A1EF016A5639F57F9C8628,34906F01E0D7AC10DF83C915,6774EC7DCF7F8B17C2BA6F76); sourceTree = "<group>";};
+		C91E46038CC50433D6EE5625 = {isa = PBXGroup; name = Resources; children = (555FDBC40E69927B4127688A,E340DC658A2781F6362F4AAA,06271BAF49532C879AA3C58B); sourceTree = "<group>";};
+		0A3E27B8CA818264D75C8D81 = {isa = PBXGroup; name = Products; children = (A8792157CB4F27FB949C035F); sourceTree = "<group>";};
+		EC6AE75C017423A0C5A951A8 = {isa = PBXGroup; children = (F7EBC87E12F52DB20EE60E65, C91E46038CC50433D6EE5625, 0A3E27B8CA818264D75C8D81); sourceTree = "<group>";};
+		C949BC6D5C90B604A2D71A2D = {isa = XCBuildConfiguration; name = Debug; buildSettings = {SDKROOT = macosx; MACOSX_DEPLOYMENT_TARGET = 13.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES;};};
+		6B41A8AA4DC8BA574D80839A = {isa = XCBuildConfiguration; name = Debug; buildSettings = {PRODUCT_NAME = "Brew"; PRODUCT_BUNDLE_IDENTIFIER = "app.local.brew"; INFOPLIST_FILE = "Resources/Info.plist"; GENERATE_INFOPLIST_FILE = "NO"; CODE_SIGN_STYLE = "Manual"; CODE_SIGN_IDENTITY = "-"; ENABLE_HARDENED_RUNTIME = "YES"; COMBINE_HIDPI_IMAGES = "YES"; SWIFT_EMIT_LOC_STRINGS = "YES"; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_COMPILATION_MODE = "singlefile"; DEBUG_INFORMATION_FORMAT = "dwarf";};};
+		D6BC124746FFCE3E312F4947 = {isa = XCBuildConfiguration; name = Release; buildSettings = {SDKROOT = macosx; MACOSX_DEPLOYMENT_TARGET = 13.0; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES;};};
+		D08485A5F2F598519122351B = {isa = XCBuildConfiguration; name = Release; buildSettings = {PRODUCT_NAME = "Brew"; PRODUCT_BUNDLE_IDENTIFIER = "app.local.brew"; INFOPLIST_FILE = "Resources/Info.plist"; GENERATE_INFOPLIST_FILE = "NO"; CODE_SIGN_STYLE = "Manual"; CODE_SIGN_IDENTITY = "-"; ENABLE_HARDENED_RUNTIME = "YES"; COMBINE_HIDPI_IMAGES = "YES"; SWIFT_EMIT_LOC_STRINGS = "YES"; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_COMPILATION_MODE = "wholemodule"; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";};};
+		E218C3791B52AB5D30EEDBEF = {isa = XCConfigurationList; buildConfigurations = (C949BC6D5C90B604A2D71A2D,D6BC124746FFCE3E312F4947); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+		249E4D84703C93450927DBB4 = {isa = XCConfigurationList; buildConfigurations = (6B41A8AA4DC8BA574D80839A,D08485A5F2F598519122351B); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+		34A04005BCAF206EEC990BD9 = {isa = PBXNativeTarget; name = Brew; productName = Brew; buildConfigurationList = 249E4D84703C93450927DBB4; buildPhases = (878A52FC5FF6A57D50B7B870, E2AA269EB967A8853A258BFA, 41D311A605520FC7B8B9A980); buildRules = (); dependencies = (); productReference = A8792157CB4F27FB949C035F; productType = "com.apple.product-type.application";};
+		244210E48437B6556980A702 = {isa = PBXProject; attributes = {LastUpgradeCheck = 2700;}; buildConfigurationList = E218C3791B52AB5D30EEDBEF; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; knownRegions = (en, Base); mainGroup = EC6AE75C017423A0C5A951A8; productRefGroup = 0A3E27B8CA818264D75C8D81; projectDirPath = ""; projectRoot = ""; targets = (34A04005BCAF206EEC990BD9);};
+}; rootObject = 244210E48437B6556980A702;}

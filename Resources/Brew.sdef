@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="Brew Terminology">
+    <suite name="Brew Suite" code="Brew" description="Control your Mac’s awake session.">
+        <command name="start session" code="Brewstar" description="Start sleep prevention using the selected duration.">
+            <cocoa class="BrewStartSessionCommand"/>
+            <parameter name="for seconds" code="dura" type="real" optional="yes" description="Duration from 1 second to 7 days. Omit to use the selected duration.">
+                <cocoa key="seconds"/>
+            </parameter>
+        </command>
+        <command name="stop session" code="Brewstop" description="End sleep prevention."><cocoa class="BrewStopSessionCommand"/></command>
+        <command name="toggle" code="Brewtogl" description="Toggle sleep prevention."><cocoa class="BrewToggleCommand"/></command>
+        <command name="is awake" code="Brewstat" description="Return whether Brew has an active session.">
+            <cocoa class="BrewIsAwakeCommand"/>
+            <result type="boolean"/>
+        </command>
+    </suite>
+</dictionary>
