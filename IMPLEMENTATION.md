@@ -37,8 +37,10 @@ The user screenshot exposed a black inactive icon against the dark menu bar. Rep
 - [x] Add isolated build output support in `scripts/build.sh`; verify packaging does not replace the running development app.
 - [x] Add `scripts/package.sh` and native installer resources; verify architecture/minimum macOS, non-relocatable Applications payload, and checksums.
 - [x] Extract the package and ZIP, compare their payloads, validate signatures, and run core tests and live diagnostics from the packaged app.
-- [ ] Push packaging source, tag `v1.0.0`, upload the PKG, ZIP, and checksums, and verify the public release and uploaded hashes.
+- [x] Push packaging source, tag `v1.0.0`, upload the PKG, ZIP, and checksums, and verify the public release and uploaded hashes.
 
 No Developer ID identities are installed on this Mac. Publish an explicitly unsigned, unnotarized Apple Silicon release with local app signing and clear installation notes.
 
 Release validation: `build/release-core-tests.log` reports 17 tests, 58 assertions, 0 failures. `build/release-final-1.0.0/validation.log` confirms matching payloads, version, architecture, minimum OS, fixed destination, and native Installer selection. Both extracted app signatures validate, live packaged-app diagnostics pass, and download checksums match.
+
+Published https://github.com/flux-i/brew/releases/tag/v1.0.0 as the latest public release, with PKG, ZIP, and checksums. Downloaded all three assets back from GitHub and verified their hashes against the local build. Release tag points to packaging commit `43dda62`.
